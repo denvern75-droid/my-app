@@ -1,0 +1,10 @@
+# Cloudflare / Wrangler local files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
+
+# OS files
+.DS_Store
+Thumbs.db
