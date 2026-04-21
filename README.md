@@ -51,3 +51,9 @@ OPENAI_MODEL=gpt-4.1-mini
 ```
 
 `.dev.vars`는 `.gitignore`에 포함되어 GitHub에 올라가지 않습니다.
+
+## 배포 문제 진단
+
+현재 운영 URL에서 정적 페이지는 열리지만 `/api/health`가 `404` 또는 `/api/report-stream`가 `405`를 반환하면 Cloudflare Pages Functions가 배포본에 포함되지 않은 상태일 가능성이 큽니다.
+
+이 경우 먼저 `DEPLOYMENT_DIAGNOSIS.md`의 체크리스트에 따라 Cloudflare Pages 연결 브랜치, 최신 배포 커밋, 빌드 출력 디렉터리, `functions` 디렉터리 포함 여부를 확인하세요.
